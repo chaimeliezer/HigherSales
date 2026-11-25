@@ -266,6 +266,12 @@ html.still [data-reveal], html.still .step .win div { opacity: 1 !important; tra
 /* production: the hero photographs sit in <picture> elements that take no box of their own */
 .stage picture { display: contents; }
 
+/* production: the footer credit, after the copyright */
+.site-footer .base .credit { margin-left: 14px; padding-left: 14px; border-left: 1px solid #444; }
+.site-footer .base .credit a { display: inline; margin: 0; font-weight: 400; color: #cfcfcf; text-decoration: underline; text-decoration-color: #666; text-underline-offset: 3px; transition: color .2s, text-decoration-color .2s; }
+.site-footer .base .credit a:hover { color: #fff; text-decoration-color: var(--sky); }
+@media (max-width: 700px) { .site-footer .base .credit { display: block; margin: 6px 0 0; padding: 0; border: 0; } }
+
 /* production: the form (honeypot hidden, fields marked after the visitor has tried them, Send locked while sending) */
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .field input:user-invalid, .field textarea:user-invalid { border-color: #c62828; box-shadow: inset 0 -3px 0 #f3b8b8; }
